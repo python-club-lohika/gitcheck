@@ -24,7 +24,6 @@ class PythonOrgSearch(unittest.TestCase):
         elem.send_keys("pycon")
         assert "No results found." not in driver.page_source
         elem.send_keys(Keys.RETURN)
-        elem.send_keys(Keys.RETURN)
         
     def test_search_in_google(self):
         driver = self.driver
@@ -37,11 +36,9 @@ class PythonOrgSearch(unittest.TestCase):
         elem.send_keys("pycon")
         assert "No results found." not in driver.page_source
         elem.send_keys(Keys.RETURN)
-        el = driver.find_element_by_xpath("\\button")
     def tearDown(self):
         self.driver.close()
         
-        // test1
 
 if __name__ == "__main__":
     unittest.main()
