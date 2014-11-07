@@ -30,15 +30,13 @@ class PythonOrgSearch(unittest.TestCase):
         driver.get("http://www.google.com")
         self.assertIn("Google", driver.title)
         wait = WebDriverWait(driver, 10)
-        elem = wait.until(driver.find_element_by_name("q"))
-
-       
+        elem = wait.until(driver.find_element_by_name("q"))       
         elem.send_keys("pycon")
         assert "No results found." not in driver.page_source
         elem.send_keys(Keys.RETURN)
     def tearDown(self):
         self.driver.close()
-        
+        a = 'hello'
 
 if __name__ == "__main__":
     unittest.main()
